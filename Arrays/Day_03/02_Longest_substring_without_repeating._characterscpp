@@ -1,0 +1,22 @@
+// Leetcode 3: Longest substring without repeating characters
+// Using Hashmap(Set)
+// Time complexity: O(n)
+// Space complexity: O(1)
+// Date: 1-May-2026
+
+int lengthOfLongestSubstring(string s) {
+    unordered_set<char> seen;
+    int st = 0, ans = 0;
+
+    for(int e = 0; e < s.length(); e++) {
+        // Jab tak repeat hai, start ko aage badhao
+        while(seen.find(s[e])!= seen.end()) {
+            seen.erase(s[st]);
+            st++;
+        }
+
+        seen.insert(s[e]); // Naya char daal
+        ans = max(ans, e - st + 1); // Window size update
+    }
+    return ans;
+}
