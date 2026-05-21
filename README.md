@@ -24,6 +24,7 @@ Daily DSA practice | 3 questions every day | C++
 - Arrays
 - Binary Search
 - Strings
+- Sorting
 - Backtracking
 
 ## 🔥 Streak: 20+ Days
